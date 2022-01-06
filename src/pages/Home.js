@@ -43,7 +43,7 @@ function Home() {
             <h1 className='text-xl lg:text-2xl text-white font-semibold'>It's those aquatic reptiles. 1,800 Voxel Turtles are coming to the Ethereum network.</h1>
             <h1 className='text-4xl lg:text-6xl text-white font-semibold mt-5'>COMING SOON!</h1>
             <a href='https://discord.gg/aZCmD2NCd5' target="_blank">
-            <button class="text-xl lg:text-3xl bg-blue-500 text-black font-medium lg:py-6 lg:px-12 py-3 px-3 mt-10 turtleButton">
+            <button class="text-xl lg:text-3xl text-black font-medium lg:py-6 lg:px-12 py-3 px-3 mt-10 turtleButton">
               Join the Discord
             </button>
             </a>
