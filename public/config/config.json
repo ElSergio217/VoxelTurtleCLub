@@ -1,0 +1,18 @@
+{
+  "CONTRACT_ADDRESS": "0xcf2039f71a99140a0f6be8dede0d451c039bfb99",
+  "SCAN_LINK": "https://rinkeby.etherscan.io/address/0xcf2039f71a99140a0f6be8dede0d451c039bfb99",
+  "NETWORK": {
+    "NAME": "Rinkeby Test Network",
+    "SYMBOL": "ETH",
+    "ID": 4
+  },
+  "NFT_NAME": "Voxel Turtle",
+  "SYMBOL": "VTCNFT",
+  "MAX_SUPPLY": 1800,
+  "WEI_COST": 10000000000000000,
+  "DISPLAY_COST": 0.01,
+  "GAS_LIMIT": 285000,
+  "MARKETPLACE": "Opeansea",
+  "MARKETPLACE_LINK": "https://testnets.opensea.io/collection/test-vtc",
+  "SHOW_BACKGROUND": true
+}
