@@ -9,7 +9,6 @@ class App extends Component {
         <Router>
             <Routes>
                 <Route exact path="/" element={<Home/>}/>
-                {/* <Route exact path="/mint" element={<Mint/>}/> */}
             </Routes>
         </Router>
         );

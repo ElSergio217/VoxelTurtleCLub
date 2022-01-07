@@ -46,3 +46,8 @@ code {
   transform: none;
   visibility: visible;
 }
+
+.linkText{
+  text-decoration: underline;
+  color:#f6b01c;
+}

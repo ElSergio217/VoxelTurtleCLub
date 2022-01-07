@@ -5,6 +5,7 @@ import header from '../imgs/dance.gif';
 import logo from '../imgs/logo.png';
 import sleep from '../imgs/sleep.png';
 import turle1 from '../imgs/turtle1.png';
+import Mint from './Mint'
 
 import '../styles/index.css';
 
@@ -32,7 +33,7 @@ function Home() {
         </div>
         <img src={header} className='max-h-32 cursor-pointer' onClick={() =>scrollToPane(0)}/>
         <div class="flex-1 flex justify-center ml-auto self-center">
-          <a href="#" class="turtleButton inline-block text-lg font-semibold px-6 py-4 text-black">Coming Soon</a>
+          <a href="#responsive-header" class="turtleButton inline-block text-lg font-semibold px-6 py-4 text-black" onClick={() =>scrollToPane(4)}>Coming Soon</a>
         </div>
       </nav>
 
@@ -178,6 +179,8 @@ function Home() {
             </div>
           </div>
         </div>
+
+        {/* <Mint refProp={pageRef[4]}/> */}
   
         {/* <div className='flex py-10 turtleHeader' ref={pageRef[3]}>
         <div class="grid grid-cols-1 lg:grid-cols-2 m-auto lg:w-1/2 w-full mx-auto">
