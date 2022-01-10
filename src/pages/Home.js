@@ -6,6 +6,7 @@ import logo from '../imgs/logo.png';
 import sleep from '../imgs/sleep.png';
 import turle1 from '../imgs/turtle1.png';
 import Mint from './Mint'
+import Countdown from 'react-countdown';
 
 import '../styles/index.css';
 
@@ -16,6 +17,34 @@ function Home() {
 
   const scrollToRef = ref => ref.current.scrollIntoView({behavior: "smooth", block: "start"});
   const scrollToPane = num => scrollToRef(pageRef[num]);
+
+
+  const renderer = ({ days,hours, minutes, seconds, completed }) => {
+    if (completed) {
+      // Render a completed state
+      return <span>You are good to go!</span>;
+    } else {
+      // Render a countdown
+      return <div class="grid grid-cols-4 text-4xl lg:text-6xl text-white font-semibold mt-5 lg:divide-x"> 
+              <div>
+                {days}
+                <p className="text-sm lg:text-lg text-white">Days</p>
+              </div> 
+              <div>
+                {hours}
+                <p className="text-sm lg:text-lg text-white">Hours</p>
+              </div> 
+              <div>
+                {minutes}
+                <p className="text-sm lg:text-lg text-white">Minutes</p>
+              </div> 
+              <div>
+                {seconds}
+                <p className="text-sm lg:text-lg text-white">Seconds</p>
+              </div>
+            </div>;
+    }
+  };
 
   return (
     <>
@@ -42,7 +71,8 @@ function Home() {
           <img src={logo} className="w-3/4 lg:w-full "/>
           <div className='text-center m-auto w-3/4'>
             <h1 className='text-xl lg:text-2xl text-white font-semibold'>It's those aquatic reptiles. 1,800 Voxel Turtles are coming to the Ethereum network.</h1>
-            <h1 className='text-4xl lg:text-6xl text-white font-semibold mt-5'>COMING SOON!</h1>
+            {/* <h1 className='text-4xl lg:text-6xl text-white font-semibold mt-5'>COMING SOON!</h1> */}
+            <Countdown date={new Date("2-15-2022") } renderer={renderer} />
             <a href='https://discord.gg/aZCmD2NCd5' target="_blank">
             <button class="text-xl lg:text-3xl text-black font-medium lg:py-6 lg:px-12 py-3 px-3 mt-10 turtleButton">
               Join the Discord
@@ -58,16 +88,18 @@ function Home() {
 
       <div className='flex p-6 turtleHeader' ref={pageRef[1]}>
           <div class=" m-auto container"> 
-            <FadeInSection>
               <div class="grid lg:grid-cols-2 grid-cols-1 m-auto container text-center mt-20 ">
                 <p className='text-xl lg:text-2xl text-white font-semibold whitespace-pre-wrap text-left w-full mx-auto mt-5'>
-                <h1 className='text-4xl lg:text-6xl	text-white font-semibold mt-5 w-full m-auto '>About Voxel Turtle Club</h1>  
+                  <FadeInSection>
+                    <h1 className='text-4xl lg:text-6xl	text-white font-semibold mt-5 w-full m-auto '>About Voxel Turtle Club</h1>  
+                  </FadeInSection>
                   <br/>
-                  Voxel Turtle Club is a digitally generated NFT collection of turtles with different types of attributes such as head wear, face style, tops and more. Each Voxel Turtle are secured by the Ethereum blockchain with one owner at a time. Our mission is to use the Voxel Turtle Club to build awareness and contribute to turtles rescue and other sea creatures. 
+                  <FadeInSection>
+                    Voxel Turtle Club is a digitally generated NFT collection of turtles with different types of attributes such as head wear, face style, tops and more. Each Voxel Turtle are secured by the Ethereum blockchain with one owner at a time. Our mission is to use the Voxel Turtle Club to build awareness and contribute to turtles rescue and other sea creatures. 
+                  </FadeInSection>
                 </p>
                 <img src={turle1} className='w-1/3 justify-self-center self-end '/>
               </div>
-            </FadeInSection>
           </div>
       </div> 
 
@@ -76,7 +108,9 @@ function Home() {
         <div class=" m-auto container">
           <FadeInSection>
             <h1 className='text-4xl lg:text-6xl	text-white font-semibold mt-5 text-center w-full m-auto '>Voxel Turtle Roadmap</h1>   
-            <div class="grid lg:grid-cols-4 grid-cols-1 m-auto container text-center mt-20 lg:divide-x">        
+          </FadeInSection>
+          <div class="grid lg:grid-cols-4 grid-cols-1 m-auto container text-center mt-20 lg:divide-x">  
+            <FadeInSection>
               <div className='p-2'>
                 <p className='text-md lg:text-md text-white font-semibold mb-2'>Phase 1</p>
                 <p className='text-3xl lg:text-4xl text-white font-semibold mb-5 self-end'>1,800 Voxel Turtles for mint</p>
@@ -84,6 +118,8 @@ function Home() {
                   We want the world to be a part of the Voxel Turtle club! We look forward to dropping 1,800 Voxel Turtles in 2022.
                 </p>
               </div>
+            </FadeInSection>
+            <FadeInSection>
               <div className='p-2'>
                 <p className='text-md lg:text-md text-white font-semibold mb-2'>Phase 2</p>
                 <p className='text-3xl lg:text-4xl text-white font-semibold mb-5 self-end'>20 piece Collection Rare drop</p>
@@ -91,6 +127,8 @@ function Home() {
                   20 1/1 rare Voxel Turtles will be up for grabs! These rare Voxel Turtles will be only available on OpenSea. Holders will not only hold a rare Voxel Turtle but will also get additional chances to win more exclusive Voxel Turtles in the future!
                 </p>
               </div>
+            </FadeInSection>
+            <FadeInSection>
               <div className='p-2'>
                 <p className='text-md lg:text-md text-white font-semibold mb-2'>Phase 3</p>
                 <p className='text-3xl lg:text-4xl text-white font-semibold mb-5 self-end'>Giving Back to <br/>IRL Turtles</p>
@@ -98,6 +136,8 @@ function Home() {
                   We plan to give back to a bigger cause. Voxel Turtle Club will donate 20% of each Voxel Turtle minted to a selected organization that mission ties with sea turtles and sea life rescue.
                 </p>            
               </div>
+            </FadeInSection>
+            <FadeInSection>
               <div className='p-2'>
                 <p className='text-md lg:text-md text-white font-semibold mb-2'>Phase 4</p>
                 <p className='text-3xl lg:text-4xl text-white font-semibold mb-5 self-end'>Voxel Turtle <br/> Application</p>
@@ -105,8 +145,8 @@ function Home() {
                   Our team looks forward to keeping the Voxel Turtle Club alive for a long time. We look forward to creating different types of applications to make your Voxel Turtle come to life. This includes to not limited to virtual reality worlds, augmented reality applications, and video games.
                 </p>
               </div>
-            </div>
-          </FadeInSection>
+            </FadeInSection>
+          </div>
         </div>
       </div> 
 
