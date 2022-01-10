@@ -95,7 +95,7 @@ function Home() {
                   </FadeInSection>
                   <br/>
                   <FadeInSection>
-                    Voxel Turtle Club is a digitally generated NFT collection of turtles with different types of attributes such as head wear, face style, tops and more. Each Voxel Turtle are secured by the Ethereum blockchain with one owner at a time. Our mission is to use the Voxel Turtle Club to build awareness and contribute to turtles rescue and other sea creatures. 
+                    Voxel Turtle Club is a digitally generated NFT collection of turtles with different types of attributes such as head wear, face style, tops and more. Each Voxel Turtle are secured by the Ethereum blockchain with one owner at a time. Our mission is to use the Voxel Turtle Club to build awareness and contribute to turtles and sea life rescue. 
                   </FadeInSection>
                 </p>
                 <img src={turle1} className='w-1/3 justify-self-center self-end '/>
