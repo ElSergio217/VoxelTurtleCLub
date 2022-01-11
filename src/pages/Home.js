@@ -22,10 +22,12 @@ function Home() {
   const renderer = ({ days,hours, minutes, seconds, completed }) => {
     if (completed) {
       // Render a completed state
-      return <span>You are good to go!</span>;
+      return  <div class="grid grid-cols-1 text-4xl lg:text-6xl text-white font-semibold mt-5 divide-x"> 
+                <h1 className='text-4xl lg:text-6xl text-white font-semibold mt-5 uppercase'>Now Available</h1>
+              </div>
     } else {
       // Render a countdown
-      return <div class="grid grid-cols-4 text-4xl lg:text-6xl text-white font-semibold mt-5 lg:divide-x"> 
+      return <div class="grid grid-cols-4 text-4xl lg:text-6xl text-white font-semibold mt-5 divide-x"> 
               <div>
                 {days}
                 <p className="text-sm lg:text-lg text-white">Days</p>
@@ -50,19 +52,19 @@ function Home() {
     <>
       <nav class=" turtleHeader flex fixed w-screen invisible md:visible z-10">
         <div class="flex-1 flex justify-center mr-auto self-center">
-            <a href="#responsive-header" class="text-lg mr-6 text-white font-semibold	" onClick={() =>scrollToPane(1)}>
+            <a class="text-lg mr-6 text-white font-semibold	cursor-pointer" onClick={() =>scrollToPane(1)}>
               ABOUT
             </a>
-            <a href="#responsive-header" class="text-lg mr-6 text-white font-semibold	" onClick={() =>scrollToPane(2)}>
+            <a class="text-lg mr-6 text-white font-semibold	cursor-pointer" onClick={() =>scrollToPane(2)}>
               ROADMAP
             </a>
-            <a href="#responsive-header" class="text-lg mr-6 text-white font-semibold	" onClick={() =>scrollToPane(3)}>
+            <a class="text-lg mr-6 text-white font-semibold	cursor-pointer" onClick={() =>scrollToPane(3)}>
               FAQ
             </a>
         </div>
         <img src={header} className='max-h-32 cursor-pointer' onClick={() =>scrollToPane(0)}/>
         <div class="flex-1 flex justify-center ml-auto self-center">
-          <a href="#responsive-header" class="turtleButton inline-block text-lg font-semibold px-6 py-4 text-black" onClick={() =>scrollToPane(4)}>Coming Soon</a>
+          <a class="turtleButton inline-block text-lg font-semibold px-6 py-4 text-black cursor-pointer" onClick={() =>scrollToPane(4)}>Coming Soon</a>
         </div>
       </nav>
 
@@ -213,9 +215,7 @@ function Home() {
                   </details>
                 </FadeInSection>
               </div>
-              <FadeInSection>
-                <img src={sleep} className='w-1/2 justify-self-center self-start '/>
-              </FadeInSection>
+              <img src={sleep} className='w-1/2 justify-self-center self-start '/>
             </div>
           </div>
         </div>
