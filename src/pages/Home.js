@@ -7,6 +7,8 @@ import sleep from '../imgs/sleep.png';
 import turle1 from '../imgs/turtle1.png';
 import Mint from './Mint'
 import Countdown from 'react-countdown';
+import { FaTwitter, FaInstagram } from "react-icons/fa";
+
 
 import '../styles/index.css';
 
@@ -50,7 +52,7 @@ function Home() {
 
   return (
     <>
-      <nav class=" turtleHeader flex fixed w-screen invisible md:visible z-10">
+      <nav class=" turtleHeader flex fixed w-screen invisible lg:visible z-10">
         <div class="flex-1 flex justify-center mr-auto self-center">
             <a class="text-lg mr-6 text-white font-semibold	cursor-pointer" onClick={() =>scrollToPane(1)}>
               ABOUT
@@ -64,7 +66,9 @@ function Home() {
         </div>
         <img src={header} className='max-h-32 cursor-pointer' onClick={() =>scrollToPane(0)}/>
         <div class="flex-1 flex justify-center ml-auto self-center">
-          <a class="turtleButton inline-block text-lg font-semibold px-6 py-4 text-black cursor-pointer" onClick={() =>scrollToPane(4)}>Coming Soon</a>
+          <a href="https://twitter.com/VoxelTurtleClub" target={"_blank"} class="inline-block text-lg font-semibold text-white cursor-pointer self-center m-5" onClick={() =>scrollToPane(4)}><FaTwitter size={32}/></a>
+          {/* <a class="inline-block text-lg font-semibold text-white cursor-pointer self-center m-5" onClick={() =>scrollToPane(4)}><FaInstagram size={32}/></a> */}
+          <a class="turtleButton inline-block text-lg font-semibold px-6 py-4 text-black cursor-pointer self-center m-5" onClick={() =>scrollToPane(4)}>Coming Soon</a>
         </div>
       </nav>
 
@@ -80,6 +84,9 @@ function Home() {
               Join the Discord
             </button>
             </a>
+            <br/>
+            <a class="inline-block text-lg font-semibold text-white cursor-pointer self-center m-5 lg:invisible visible" onClick={() =>scrollToPane(4)}><FaTwitter size={32}/></a>
+            {/* <a class="inline-block text-lg font-semibold text-white cursor-pointer self-center m-5 md:invisible visible" onClick={() =>scrollToPane(4)}><FaInstagram size={32}/></a> */}
           </div>
         </div>
       </div>   
