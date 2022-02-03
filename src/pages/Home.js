@@ -76,7 +76,7 @@ function Home() {
         <div class="grid lg:grid-cols-2 md:grid-cols-1  m-auto w-5/6">
           <img src={logo} className="w-3/4 lg:w-full "/>
           <div className='text-center m-auto w-3/4'>
-            <h1 className='text-xl lg:text-2xl text-white font-semibold'>It's those aquatic reptiles. 1,800 Voxel Turtles are coming to the Ethereum network.</h1>
+            <h1 className='text-xl lg:text-2xl text-white font-semibold'>It's those aquatic reptiles. 1,800 Voxel Turtles are coming to the Polygon Network.</h1>
             {/* <h1 className='text-4xl lg:text-6xl text-white font-semibold mt-5'>COMING SOON!</h1> */}
             <Countdown date={new Date("2-15-2022") } renderer={renderer} />
             <a href='https://discord.gg/aZCmD2NCd5' target="_blank">
