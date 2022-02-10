@@ -126,15 +126,11 @@ function App(props) {
               </a>
             </div>
 
+            <p className="text-md text-white font-semibold">
+              NOTE: Minting is currently available for whitelisted wallets
+            </p>
+
  
-            {/* <button onClick={(e) => { window.open(CONFIG.MARKETPLACE_LINK, "_blank"); }} className="text-xl lg:text-2xl text-white font-semibold">
-              {CONFIG.MARKETPLACE}
-            </button> */}
-
-
-
-
-
             {Number(data.totalSupply) >= CONFIG.MAX_SUPPLY ? (
               <>
                 <p className="text-xl lg:text-2xl text-white font-semibold">
@@ -227,13 +223,19 @@ function App(props) {
                         }}
                         className="turtleButton inline-block text-lg font-semibold px-6 py-4 text-black"
                       >
-                        {claimingNft ? "BUSY" : "BUY"}
+                        {claimingNft ? "BUSY" : "MINT"}
                       </button>
                     </div>
                   </>
                 )}
+                <br/>
+
               </>
             )}
+            <br/>
+            <button onClick={(e) => { window.open(CONFIG.MARKETPLACE_LINK, "_blank"); }} className="turtleButton inline-block text-lg font-semibold px-6 py-4 text-black">
+              View on {CONFIG.MARKETPLACE}
+            </button>
           </div>
           <img src={header} className="w-2/12 justify-self-center md:w-3/4"/>
         </div>

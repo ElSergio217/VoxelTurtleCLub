@@ -24,8 +24,13 @@ function Home() {
   const renderer = ({ days,hours, minutes, seconds, completed }) => {
     if (completed) {
       // Render a completed state
-      return  <div class="grid grid-cols-1 text-4xl lg:text-6xl text-white font-semibold mt-5 divide-x"> 
+      return  <div class="grid grid-cols-1 text-4xl lg:text-6xl text-white font-semibold mt-5"> 
                 <h1 className='text-4xl lg:text-6xl text-white font-semibold mt-5 uppercase'>Now Available</h1>
+                <a onClick={() =>scrollToPane(4)}>
+                  <button class="text-xl lg:text-3xl text-black font-medium lg:py-6 lg:px-12 py-3 px-3 mt-10 turtleButton">
+                    Mint Now
+                  </button>
+                </a>
               </div>
     } else {
       // Render a countdown
@@ -68,7 +73,7 @@ function Home() {
         <div class="flex-1 flex justify-center ml-auto self-center">
           <a href="https://twitter.com/VoxelTurtleClub" target={"_blank"} class="inline-block text-lg font-semibold text-white cursor-pointer self-center m-5" ><FaTwitter size={32}/></a>
           <a href="https://www.instagram.com/voxelturtleclub/" target={"_blank"} class="inline-block text-lg font-semibold text-white cursor-pointer self-center m-5"><FaInstagram size={32}/></a>
-          <a class="turtleButton inline-block text-lg font-semibold px-6 py-4 text-black cursor-pointer self-center m-5" onClick={() =>scrollToPane(4)}>Coming Soon</a>
+          <a class="turtleButton inline-block text-lg font-semibold px-6 py-4 text-black cursor-pointer self-center m-5" onClick={() =>scrollToPane(4)}>Mint Now</a>
         </div>
       </nav>
 
@@ -79,6 +84,7 @@ function Home() {
             <h1 className='text-xl lg:text-2xl text-white font-semibold'>It's those aquatic reptiles. 1,800 Voxel Turtles are coming to the Polygon Network.</h1>
             {/* <h1 className='text-4xl lg:text-6xl text-white font-semibold mt-5'>COMING SOON!</h1> */}
             <Countdown date={new Date("2-15-2022") } renderer={renderer} />
+
             <a href='https://discord.gg/aZCmD2NCd5' target="_blank">
             <button class="text-xl lg:text-3xl text-black font-medium lg:py-6 lg:px-12 py-3 px-3 mt-10 turtleButton">
               Join the Discord
@@ -227,7 +233,7 @@ function Home() {
           </div>
         </div>
 
-        {/* <Mint refProp={pageRef[4]}/> */}
+        <Mint refProp={pageRef[4]}/>
   
         {/* <div className='flex py-10 turtleHeader' ref={pageRef[3]}>
         <div class="grid grid-cols-1 lg:grid-cols-2 m-auto lg:w-1/2 w-full mx-auto">
