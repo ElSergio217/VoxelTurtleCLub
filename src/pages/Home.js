@@ -73,7 +73,7 @@ function Home() {
         <div class="flex-1 flex justify-center ml-auto self-center">
           <a href="https://twitter.com/VoxelTurtleClub" target={"_blank"} class="inline-block text-lg font-semibold text-white cursor-pointer self-center m-5" ><FaTwitter size={32}/></a>
           <a href="https://www.instagram.com/voxelturtleclub/" target={"_blank"} class="inline-block text-lg font-semibold text-white cursor-pointer self-center m-5"><FaInstagram size={32}/></a>
-          <a class="turtleButton inline-block text-lg font-semibold px-6 py-4 text-black cursor-pointer self-center m-5" onClick={() =>scrollToPane(4)}>Mint Now</a>
+          <a class="turtleButton inline-block text-lg font-semibold px-6 py-4 text-black cursor-pointer self-center m-5" onClick={() =>scrollToPane(4)}>Coming Soon</a>
         </div>
       </nav>
 
@@ -233,7 +233,7 @@ function Home() {
           </div>
         </div>
 
-        <Mint refProp={pageRef[4]}/>
+        {/* <Mint refProp={pageRef[4]}/> */}
   
         {/* <div className='flex py-10 turtleHeader' ref={pageRef[3]}>
         <div class="grid grid-cols-1 lg:grid-cols-2 m-auto lg:w-1/2 w-full mx-auto">
