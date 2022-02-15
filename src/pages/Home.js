@@ -73,7 +73,7 @@ function Home() {
         <div class="flex-1 flex justify-center ml-auto self-center">
           <a href="https://twitter.com/VoxelTurtleClub" target={"_blank"} class="inline-block text-lg font-semibold text-white cursor-pointer self-center m-5" ><FaTwitter size={32}/></a>
           <a href="https://www.instagram.com/voxelturtleclub/" target={"_blank"} class="inline-block text-lg font-semibold text-white cursor-pointer self-center m-5"><FaInstagram size={32}/></a>
-          <a class="turtleButton inline-block text-lg font-semibold px-6 py-4 text-black cursor-pointer self-center m-5" onClick={() =>scrollToPane(4)}>Coming Soon</a>
+          <a class="turtleButton inline-block text-lg font-semibold px-6 py-4 text-black cursor-pointer self-center m-5" onClick={() =>scrollToPane(4)}> Mint Now</a>
         </div>
       </nav>
 
@@ -81,7 +81,7 @@ function Home() {
         <div class="grid lg:grid-cols-2 md:grid-cols-1  m-auto w-5/6">
           <img src={logo} className="w-3/4 lg:w-full "/>
           <div className='text-center m-auto w-3/4'>
-            <h1 className='text-xl lg:text-2xl text-white font-semibold'>It's those aquatic reptiles. 1,800 Voxel Turtles are coming to the Polygon Network.</h1>
+            <h1 className='text-xl lg:text-2xl text-white font-semibold'>It's those aquatic reptiles. 1,800 Voxel Turtles are on the Polygon Network.</h1>
             {/* <h1 className='text-4xl lg:text-6xl text-white font-semibold mt-5'>COMING SOON!</h1> */}
             <Countdown date={new Date("2-15-2022") } renderer={renderer} />
 
@@ -233,7 +233,7 @@ function Home() {
           </div>
         </div>
 
-        {/* <Mint refProp={pageRef[4]}/> */}
+        <Mint refProp={pageRef[4]}/>
   
         {/* <div className='flex py-10 turtleHeader' ref={pageRef[3]}>
         <div class="grid grid-cols-1 lg:grid-cols-2 m-auto lg:w-1/2 w-full mx-auto">
