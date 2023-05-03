@@ -78,21 +78,14 @@ function Home() {
       </nav>
 
       <div className='flex h-screen turtleHeader'  ref={pageRef[0]}>
-        <div class="grid lg:grid-cols-2 md:grid-cols-1  m-auto w-5/6">
+        <div class="grid lg:grid-cols-2 md:grid-cols-1  m-auto w-5/6 items-center">
           <img src={logo} className="w-3/4 lg:w-full "/>
           <div className='text-center m-auto w-3/4'>
             <h1 className='text-xl lg:text-2xl text-white font-semibold'>It's those aquatic reptiles. 1,800 Voxel Turtles are on the Polygon Network.</h1>
             {/* <h1 className='text-4xl lg:text-6xl text-white font-semibold mt-5'>COMING SOON!</h1> */}
             <Countdown date={new Date("2-15-2022") } renderer={renderer} />
 
-            <a href='https://discord.gg/aZCmD2NCd5' target="_blank">
-            <button class="text-xl lg:text-3xl text-black font-medium lg:py-6 lg:px-12 py-3 px-3 mt-10 turtleButton">
-              Join the Discord
-            </button>
-            </a>
-            <br/>
-            <a href="https://twitter.com/VoxelTurtleClub" target={"_blank"} class="inline-block text-lg font-semibold text-white cursor-pointer self-center m-5 lg:hidden visible"><FaTwitter size={32}/></a>
-            <a href="https://www.instagram.com/voxelturtleclub/" target={"_blank"} class="inline-block text-lg font-semibold text-white cursor-pointer self-center m-5 md:invisible visible"><FaInstagram size={32}/></a>
+        
           </div>
         </div>
       </div>   
@@ -124,7 +117,7 @@ function Home() {
           <FadeInSection>
             <h1 className='text-4xl lg:text-6xl	text-white font-semibold mt-5 text-center w-full m-auto '>Voxel Turtle Roadmap</h1>   
           </FadeInSection>
-          <div class="grid lg:grid-cols-4 grid-cols-1 m-auto container text-center mt-20 lg:divide-x">  
+          <div class="grid lg:grid-cols-4 grid-cols-1 m-auto container mt-20 lg:divide-x">  
             <FadeInSection>
               <div className='p-2'>
                 <p className='text-md lg:text-md text-white font-semibold mb-2'>Phase 1</p>
